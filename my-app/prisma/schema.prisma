@@ -9,5 +9,11 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
+  provider = "sqlite"
+}
+
+model Task{
+  id Int @id @default(autoincrement())
+  title String
+  createAt DateTime @default(now())
 }
