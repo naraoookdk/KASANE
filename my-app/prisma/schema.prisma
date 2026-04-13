@@ -10,10 +10,11 @@ generator client {
 
 datasource db {
   provider = "sqlite"
+  url      = "file:./dev.db"
 }
 
 model Task{
   id Int @id @default(autoincrement())
   title String
-  createAt DateTime @default(now())
+  createdAt DateTime @default(now())
 }
